@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussão: Código HTML da Trajetória do Neymar Jr</title>
+    <style>
+        :root {
+            --primary: #002244;
+            --secondary: #ffcc00;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #2b2d42;
+            --gray-light: #eef2f5;
+            --like-color: #2ec4b6;
+            --dislike-color: #e63946;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .post-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .post-header {
+            border-bottom: 2px solid var(--gray-light);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .post-title {
+            color: var(--primary);
+            margin: 0 0 10px 0;
+        }
+
+        /* Seção de Quiz / Perguntas */
+        .quiz-section {
+            background-color: var(--gray-light);
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 5px solid var(--secondary);
+            margin-bottom: 25px;
+        }
+
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .quiz-options button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .quiz-options button:hover {
+            background: var(--secondary);
+            color: #000;
+        }
+
+        /* Área de Ações do Post (Like / Dislike) */
+        .action-bar {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid var(--gray-light);
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        .btn-action {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action.like:hover, .btn-action.like.active {
+            background-color: var(--like-color);
+            color: white;
+            border-color: var(--like-color);
+        }
+
+        .btn-action.dislike:hover, .btn-action.dislike.active {
+            background-color: var(--dislike-color);
+            color: white;
+            border-color: var(--dislike-color);
+        }
+
+        /* Formutário de Comentários */
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        .comment-form button {
+            align-self: flex-end;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .comment-form button:hover {
+            opacity: 0.9;
+        }
+
+        /* Lista de Comentários */
+        .comments-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comment-card {
+            background: #fdfdfd;
+            border: 1px solid #e2e8f0;
+            padding: 12px 16px;
+            border-radius: 8px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .comment-text {
+            margin: 0 0 8px 0;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        .comment-actions button {
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .comment-actions button:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="post-container">
+    <div class="post-header">
+        <h2 class="post-title">Análise do Código: Trajetória do Neymar Jr em HTML/CSS</h2>
+        <p>Confira as perguntas sobre a estrutura técnica do código e deixe sua opinião nos comentários abaixo!</p>
+    </div>
+
+    <!-- Seção de Perguntas / Quiz sobre o Código -->
+    <div class="quiz-section">
+        <div class="quiz-question">1. O que a variável CSS <code>--primary: #002244;</code> define no documento?</div>
+        <div class="quiz-options">
+            <button onclick="alert('Incorreto!')">A cor de fundo principal da página.</button>
+            <button onclick="alert('Correto! É a cor usada nos títulos H1, H2 e cabeçalhos de tabela.')">A cor principal usada nos títulos e cabeçalhos.</button>
+            <button onclick="alert('Incorreto!')">A cor das bordas de todas as imagens.</button>
+        </div>
+    </div>
+
+    <div class="quiz-section">
+        <div class="quiz-question">2. Por que a tabela do PSG usa a tag <code>&lt;tbody&gt;</code>?</div>
+        <div class="quiz-options">
+            <button onclick="alert('Correto! Agrupa o conteúdo principal da tabela de forma semântica.')">Para agrupar o corpo dos dados da tabela semanticamente.</button>
+            <button onclick="alert('Incorreto!')">Para criar os títulos das colunas.</button>
+        </div>
+    </div>
+
+    <!-- Barra de Avaliação do Post (Like / Dislike) -->
+    <div class="action-bar">
+        <span>O que achou do código?</span>
+        <button class="btn-action like" id="likeBtn" onclick="handleVote('like')">
+            👍 <span id="likeCount">12</span>
+        </button>
+        <button class="btn-action dislike" id="dislikeBtn" onclick="handleVote('dislike')">
+            👎 <span id="dislikeCount">2</span>
+        </button>
+    </div>
+
+    <!-- Formulário de Comentário -->
+    <h3>Deixe um Comentário</h3>
+    <form class="comment-form" onsubmit="addComment(event)">
+        <textarea id="commentInput" placeholder="Escreva seu comentário sobre o código..." required></textarea>
+        <button type="submit">Publicar Comentário</button>
+    </form>
+
+    <!-- Lista de Comentários Existentes -->
+    <h3>Comentários da Comunidade</h3>
+    <div class="comments-list" id="commentsList">
+        <div class="comment-card">
+            <div class="comment-author">Dev_Sênior</div>
+            <p class="comment-text">A estruturação semântica com tabelas para o PSG e Al-Hilal ficou muito limpa! Boa escolha de cores no CSS.</p>
+            <div class="comment-actions">
+                <button onclick="likeComment(this)">Curtir (<span>3</span>)</button>
+            </div>
+        </div>
+        <div class="comment-card">
+            <div class="comment-author">FrontEnd_Starter</div>
+            <p class="comment-text">Poderia adicionar um efeito de hover nas linhas da tabela (<code>tr:hover</code>) para melhorar a leitura.</p>
+            <div class="comment-actions">
+                <button onclick="likeComment(this)">Curtir (<span>1</span>)</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let userVote = null;
+
+    function handleVote(type) {
+        const likeBtn = document.getElementById('likeBtn');
+        const dislikeBtn = document.getElementById('dislikeBtn');
+        const likeCount = document.getElementById('likeCount');
+        const dislikeCount = document.getElementById('dislikeCount');
+
+        let currentLikes = parseInt(likeCount.innerText);
+        let currentDislikes = parseInt(dislikeCount.innerText);
+
+        if (type === 'like') {
+            if (userVote === 'like') {
+                userVote = null;
+                likeBtn.classList.remove('active');
+                likeCount.innerText = currentLikes - 1;
+            } else {
+                if (userVote === 'dislike') {
+                    dislikeBtn.classList.remove('active');
+                    dislikeCount.innerText = currentDislikes - 1;
+                }
+                userVote = 'like';
+                likeBtn.classList.add('active');
+                likeCount.innerText = currentLikes + 1;
+            }
+        } else if (type === 'dislike') {
+            if (userVote === 'dislike') {
+                userVote = null;
+                dislikeBtn.classList.remove('active');
+                dislikeCount.innerText = currentDislikes - 1;
+            } else {
+                if (userVote === 'like') {
+                    likeBtn.classList.remove('active');
+                    likeCount.innerText = currentLikes - 1;
+                }
+                userVote = 'dislike';
+                dislikeBtn.classList.add('active');
+                dislikeCount.innerText = currentDislikes + 1;
+            }
+        }
+    }
+
+    function addComment(event) {
+        event.preventDefault();
+        const input = document.getElementById('commentInput');
+        const list = document.getElementById('commentsList');
+
+        if (input.value.trim() === '') return;
+
+        const newComment = document.createElement('div');
+        newComment.className = 'comment-card';
+        newComment.innerHTML = `
+            <div class="comment-author">Você</div>
+            <p class="comment-text">${input.value}</p>
+            <div class="comment-actions">
+                <button onclick="likeComment(this)">Curtir (<span>0</span>)</button>
+            </div>
+        `;
+
+        list.prepend(newComment);
+        input.value = '';
+    }
+
+    function likeComment(btn) {
+        const countSpan = btn.querySelector('span');
+        let count = parseInt(countSpan.innerText);
+        countSpan.innerText = count + 1;
+    }
+</script>
+
+</body>
+</html>
